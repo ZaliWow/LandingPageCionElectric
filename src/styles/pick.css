@@ -1,0 +1,47 @@
+.body-pickUs{
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    height: 100%;   
+    border: 1px solid white;
+    padding:10px
+
+}
+.body-pickUs h1{
+    color:white
+}
+.options{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.option{
+width: 250px;
+height: 400px;
+margin: 10px;
+padding :20px;
+
+border: 1px solid white;
+padding:20px;
+border-radius: 10%;
+
+}
+.option h2{
+    text-align: center;
+
+}
+.option h4{
+    text-align: justify;
+}
+.option img{
+   border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+@media screen and (max-width: 800px) {
+    .options{
+        justify-content: center;
+        
+    }}
