@@ -5,7 +5,7 @@
     margin-right: 2%;
     margin-left: 2%;
     height: 100%;   
-    border: 1px solid white;
+   
     padding:10px
 
 }
@@ -22,8 +22,8 @@ width: 250px;
 height: 400px;
 margin: 10px;
 padding :20px;
-
-border: 1px solid white;
+box-shadow: 3px 10px 10px rgba(255, 255, 255, 0.2);
+border: 1px solid yellow;
 padding:20px;
 border-radius: 10%;
 

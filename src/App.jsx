@@ -5,6 +5,7 @@ import { AboutUS } from './components/aboutUs'
 import { WhyPickUs } from './components/pick'
 import { ReviewsComponent } from './components/reviews'
 import { Contact } from './components/contact'
+import { Footer } from './components/footer'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
     <AboutUS></AboutUS>
     <WhyPickUs></WhyPickUs>
     <ReviewsComponent></ReviewsComponent>
-    <Contact></Contact>
+    <Footer></Footer>
+
     </>
   )
 }

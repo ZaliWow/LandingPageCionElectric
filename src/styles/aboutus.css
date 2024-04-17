@@ -9,7 +9,8 @@
     margin-left: 2%;
     height: 100%;
     border: 1px solid white;
-    padding:10px
+    padding:10px;
+    
 }
 .aboutUs{
     display: block;
@@ -45,5 +46,10 @@
         padding: 15px;
     
         
+    }
+    .body-aboutUs-img img{
+        width: 300px;
+        height: 300px;
+    
     }
 }
