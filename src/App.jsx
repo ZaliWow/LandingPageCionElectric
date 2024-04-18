@@ -6,6 +6,7 @@ import { WhyPickUs } from './components/pick'
 import { ReviewsComponent } from './components/reviews'
 import { Contact } from './components/contact'
 import { Footer } from './components/footer'
+import { CarretePhotos } from './components/carretephotos'
 
 function App() {
 
@@ -17,7 +18,9 @@ function App() {
     <AboutUS></AboutUS>
     <WhyPickUs></WhyPickUs>
     <ReviewsComponent></ReviewsComponent>
+    <CarretePhotos></CarretePhotos>
     <Footer></Footer>
+    
 
     </>
   )

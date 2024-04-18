@@ -15,10 +15,10 @@ import { WhatsappButton } from "./whatsappButton"
 
 
 
-const pages = ['Sobre Nosotros', 'Servicios', 'Contacto', 'Estudios', ];  
+const pages = ['Sobre Nosotros', 'Servicios', 'Contacto', 'Estudios',];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export function Navbar({}) {
+export function Navbar({ }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -34,124 +34,124 @@ export function Navbar({}) {
   };
 
 
- 
-  
- 
+
+
+
   return (
-  <AppBar position="static" elevation={0} sx={{backgroundColor: 'transparent', color: 'white'}}>
-  <Container maxWidth="xl"  >
-    <Toolbar disableGutters>
-      <Typography
-        variant="h6"
-        noWrap
-        component="a"
-        href="#app-bar-with-responsive-menu"
-        sx={{
-          mr: 2,
-          display: { xs: 'none', md: 'flex' },
-          fontFamily: 'monospace',
-          fontWeight: 700,
-          letterSpacing: '.3rem',
-          color: 'white',
-          textDecoration: 'none',
-        }}
-      >
-        CIONELECTRIC
-      </Typography>
-
-      <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}>
-        <IconButton
-          variant="dark"
-          size="large"
-          aria-label="account of current user"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
-          onClick={handleOpenNavMenu}
-        >
-         
-          <MenuIcon sx={{color:'white'}} />
-          
-        </IconButton>
-        <Menu
-          id="menu-appbar"
-          anchorEl={anchorElNav}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          keepMounted
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'left',
-          }}
-          open={Boolean(anchorElNav)}
-          onClose={handleCloseNavMenu}
-          sx={{
-            display: { xs: 'block', md: 'none' },
-            color: 'white',
-          }}
-        >
-          {pages.map((page) => (
-             <Button
-             key={page}
-             href={'#' + page }
-             onClick={handleCloseNavMenu}
-             sx={{ my: 2, color: 'black', display: 'block' }}
-           >
-             {page}
-           </Button>
-          ))}
-        </Menu>
-        
-      </Box>
-
-      <Typography
-        variant="h5"
-        noWrap
-        component="a"
-        href="#app-bar-with-responsive-menu"
-        sx={{
-          mr: 2,
-          display: { xs: 'flex', md: 'none' },
-          flexGrow: 1,
-          fontFamily: 'monospace',
-          fontWeight: 700,
-          letterSpacing: '.3rem',
-          color: 'white',
-          textDecoration: 'none',
-        }}
-      >
-        
-      </Typography>
-
-      <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-      
-      </Box>
-
-      <Box sx={{ justifyContent: 'center', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-        {pages.map((page) => (
-      
-          <Button
-          variant="dark"
-            key={page}
-            href={'#' + page }
-            onClick={handleCloseNavMenu}
-            sx={{ my: 2, color: 'white', display: 'block' }}
+    <AppBar position="static" elevation={0} sx={{ backgroundColor: 'transparent', color: 'white' }}>
+      <Container maxWidth="xl"  >
+        <Toolbar disableGutters>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'white',
+              textDecoration: 'none',
+            }}
           >
-            {page}
-          </Button>
-        ))}
-      </Box>
-     
-       <Tooltip  >
-      
+            CIONELECTRIC
+          </Typography>
 
-<WhatsappButton></WhatsappButton>         
-          
-        </Tooltip>
-    </Toolbar>
-  </Container>
-</AppBar>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}>
+            <IconButton
+              variant="dark"
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+            >
+
+              <MenuIcon sx={{ color: 'white' }} />
+
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+                color: 'white',
+              }}
+            >
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  href={'#' + page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'black', display: 'block' }}
+                >
+                  {page}
+                </Button>
+              ))}
+            </Menu>
+
+          </Box>
+
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'white',
+              textDecoration: 'none',
+            }}
+          >
+
+          </Typography>
+
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+
+          </Box>
+
+          <Box sx={{ justifyContent: 'center', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page) => (
+
+              <Button
+                variant="dark"
+                key={page}
+                href={'#' + page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+
+          <Tooltip  >
+
+
+            <WhatsappButton></WhatsappButton>
+
+          </Tooltip>
+        </Toolbar>
+      </Container>
+    </AppBar>
 
   );
 }
