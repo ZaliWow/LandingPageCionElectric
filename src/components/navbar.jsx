@@ -9,15 +9,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import { grey } from '@mui/material/colors';
-import  JavascriptIcon  from '@mui/icons-material/Javascript';
-import { LinkedIn } from '@mui/icons-material';
-import { GitHub } from '@mui/icons-material';
+import { WhatsappButton } from "./whatsappButton"
 
 
 
 
-const pages = ['Sobre Nosotros', 'Servicios', 'Contacto', 'Item4', ];  
+
+const pages = ['Sobre Nosotros', 'Servicios', 'Contacto', 'Estudios', ];  
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export function Navbar({}) {
@@ -37,14 +35,7 @@ export function Navbar({}) {
 
 
  
-  const handleGithub = () => {
-    window.open("https://github.com/ZaliWow", '_blank');
-  }
-  const handleLinkedin = () => {
-
-    window.open("https://www.linkedin.com/in/william-david-morales-pineda-551589249/", '_blank');
-     
-  }
+  
  
   return (
   <AppBar position="static" elevation={0} sx={{backgroundColor: 'transparent', color: 'white'}}>
@@ -154,8 +145,8 @@ export function Navbar({}) {
      
        <Tooltip  >
       
-       <Button variant='dark' sx={{backgroundColor:'yellow', color:'black'}}>Call action</Button>
-         
+
+<WhatsappButton></WhatsappButton>         
           
         </Tooltip>
     </Toolbar>
