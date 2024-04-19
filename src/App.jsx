@@ -18,7 +18,7 @@ function App() {
     <AboutUS></AboutUS>
     <WhyPickUs></WhyPickUs>
     <ReviewsComponent></ReviewsComponent>
-    <CarretePhotos></CarretePhotos>
+
     <Footer></Footer>
     
 
