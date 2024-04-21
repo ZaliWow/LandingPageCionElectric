@@ -12,7 +12,7 @@ export function AboutUS(params) {
                 <h4>Nos enorgullece ser parte de la comunidad de El Dovio y del Valle del Cauca, y nos comprometemos a seguir sirviendo a nuestros clientes con integridad, profesionalismo y dedicación.</h4>
             </div>
             <div className="body-aboutUs-img">
-                <img src="images/cionelectric.png" alt="" />
+                <img src="images/cionelectric.jpg" alt="" />
             </div>
 
         </div>
