@@ -1,18 +1,40 @@
 import "../styles/carrete.css"
+import React, { useState, useEffect } from 'react';
 
+export function CarretePhotos(params) {
+    const [animacionVisible, setAnimacionVisible] = useState(false);
 
-export function CarretePhotos(){
-    return(
-        <div className="body-carrete">
-            <h1>Nuestro trabajo</h1>
-            <h4>Estos son algunos de los trabajos que hemos realizado dentro de <span>CIONELECTRIC</span></h4>
-            <div className="images-carrete">
-                <div className="body-carrete-img"><img src="images/trabajo1.jpg" alt="" /></div>
-                <div className="body-carrete-img"><img src="images/trabajo2.jpg" alt="" /></div>
-                <div className="body-carrete-img"><img src="images/trabajo3.jpg" alt="" /></div>
-                <div className="body-carrete-img"><img src="images/trabajo4.jpg" alt="" /></div>
-                
+    useEffect(() => {
+        const handleScroll = () => {
+            const animacionDiv = document.getElementById('bodycarrete');  
+            if (animacionDiv) {
+                const rect = animacionDiv.getBoundingClientRect();
+                const isVisible = (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+                if (isVisible) {
+                  console.log("se esta viendo")
+                    setAnimacionVisible(true);
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <div style={{ height: '200px' }}>
+            <div
+                className={animacionVisible ?  'rotate-in-center' : 'images-carrete' }
+                id="bodycarrete"
+            >
+                <h1 >Mi Animación</h1>
             </div>
         </div>
-    )
-}
+    );
+};

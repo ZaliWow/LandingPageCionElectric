@@ -1,9 +1,37 @@
 import "../styles/services.css"
 import { Button } from "@mui/material"
+import { useState, useEffect } from "react";
 import { WhatsappButton } from "./whatsappButton"
 export function Services({ }) {
-    return (
+    const [animacionVisible, setAnimacionVisible] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const animacionDiv = document.getElementById('Servicios');  
+            if (animacionDiv) {
+                const rect = animacionDiv.getBoundingClientRect();
+                const isVisible = (
+                    rect.top <= window.innerHeight &&
+                    rect.bottom >= 0 &&
+                    rect.left <= window.innerWidth &&
+                    rect.right >= 0
+                );
+                if (isVisible) {
+                  console.log("se esta viendo")
+                    setAnimacionVisible(true);
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+
+
+    return (
+<div id="Servicios" className={animacionVisible ?  'animation-services' : '' } >
         <div className="body-services">
             <h1>NUESTROS SERVICIOS</h1>
             <h3>
@@ -29,6 +57,7 @@ export function Services({ }) {
                 </div>
             </div>
         </div>
+</div>
     )
 
 }

@@ -4,12 +4,14 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 7%;
+  
     margin-right: 2%;
     margin-left: 2%;
     height: 100%;
     border: 1px solid white;
     padding:10px;
+    animation: aparecerDesdeIzquierda 0.5s ease-out forwards;
     
 }
 .aboutUs{
@@ -53,4 +55,53 @@
         height: 300px;
     
     }
+}
+
+.rotate-scale-up {
+	-webkit-animation: rotate-scale-up 0.65s linear both;
+	        animation: rotate-scale-up 0.65s linear both;
+}
+
+ @-webkit-keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+              transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+  @keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateY(0);
+              transform: scale(1) rotateY(0);
+    }
+    50% {
+      -webkit-transform: scale(1.1) rotateY(180deg);
+              transform: scale(1.1) rotateY(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateY(360deg);
+              transform: scale(1) rotateY(360deg);
+    }
+  }
+  
+  @keyframes aparecerDesdeIzquierda {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+.animation-aboutus{
+  
+  animation: aparecerDesdeIzquierda 0.5s ease-out forwards;
 }

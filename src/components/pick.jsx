@@ -1,7 +1,33 @@
 import "../styles/pick.css"
+import { useState, useEffect } from "react";
 export function WhyPickUs(params) {
+    const [animacionVisible, setAnimacionVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const animacionDiv = document.getElementById('Elegirnos');  
+            if (animacionDiv) {
+                const rect = animacionDiv.getBoundingClientRect();
+                const isVisible = (
+                    rect.top <= window.innerHeight &&
+                    rect.bottom >= 0 &&
+                    rect.left <= window.innerWidth &&
+                    rect.right >= 0
+                );
+                if (isVisible) {
+                  console.log("se esta viendo")
+                    setAnimacionVisible(true);
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
+        <div  id="Elegirnos" className={animacionVisible ?  'animation-pick' : '' }>
         <div className="body-pickUs">
             <h1>¿POR QUÉ ELEGIRNOS?</h1>
             <div className="options">
@@ -24,6 +50,7 @@ export function WhyPickUs(params) {
 
                 </div>
             </div>
+        </div>
         </div>
     )
 }

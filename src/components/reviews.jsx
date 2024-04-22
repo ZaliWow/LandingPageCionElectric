@@ -1,10 +1,34 @@
 import "../styles/reviews.css"
+import { useState, useEffect } from "react";
 
 
 export function ReviewsComponent() {
+    const [animacionVisible, setAnimacionVisible] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const animacionDiv = document.getElementById('Estudios');  
+            if (animacionDiv) {
+                const rect = animacionDiv.getBoundingClientRect();
+                const isVisible = (
+                    rect.top <= window.innerHeight &&
+                    rect.bottom >= 0 &&
+                    rect.left <= window.innerWidth &&
+                    rect.right >= 0  );
+                if (isVisible) {
+                  console.log("se esta viendo")
+                    setAnimacionVisible(true);
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
+        <div id="Estudios" className={animacionVisible ?  'animation-reviews' : '' }>
         <div className="body-reviews">
             <h1>Estudios y Experiencia</h1>
 
@@ -38,6 +62,7 @@ export function ReviewsComponent() {
             </div>
 
 
+        </div>
         </div>
     )
 }

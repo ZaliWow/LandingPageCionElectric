@@ -15,7 +15,7 @@ import { WhatsappButton } from "./whatsappButton"
 
 
 
-const pages = ['Sobre Nosotros', 'Servicios', 'Contacto', 'Estudios',];
+const pages = ['Sobre Nosotros', 'Servicios', 'Elegirnos', 'Estudios',];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export function Navbar({ }) {
@@ -54,9 +54,10 @@ export function Navbar({ }) {
               letterSpacing: '.3rem',
               color: 'white',
               textDecoration: 'none',
+              '& span':{color:'red'}
             }}
           >
-            CIONELECTRIC
+            CIONE <span>LECTRIC</span> 
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}>
