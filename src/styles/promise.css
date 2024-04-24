@@ -43,8 +43,7 @@
         display: block;
         text-align: center;
         margin-top: -13%;
-        margin-right: 2%;
-        margin-left: 2%;
+        
         height: 130vh; 
         background-image: url('/images/fondopage.gif');
         background-size: cover;
