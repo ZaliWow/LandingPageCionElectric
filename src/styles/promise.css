@@ -46,7 +46,9 @@
         margin-right: 2%;
         margin-left: 2%;
         height: 130vh; 
-      
+        background-image: url('/images/fondopage.gif');
+        background-size: cover;
+        background-position: 15% 50%;
         
     }
     .boddy h1{
