@@ -34,24 +34,27 @@ export function Services({ }) {
 <div id="Servicios" className={animacionVisible ?  'animation-services' : '' } >
         <div className="body-services">
             <h1>NUESTROS SERVICIOS</h1>
-            <h3>
+            <h4>
                 Excelentes estándares de calidad y la mejor atención en una combinación para brindar una gran atención al cliente
-            </h3>
+            </h4>
             <div className="services">
                 <div className="service">
-                    <h2>Mantenimiento residencial</h2>
-                    <h4>Revisamos tu hogar para asegurar el correcto funcionamiento de todo tu cableado electrico, detectando cortos, malas conexiones o posibles fallos que puedan generar problemas eléctricos a futuro. </h4>
+                    <h5>Mantenimiento residencial</h5>
+                    <h1>+3</h1>
+                    <p>mantenimientos totales</p>
                     <WhatsappButton></WhatsappButton>
                 </div>
                 <div className="service">
-                    <h2>Instalación y cableado eléctrico</h2>
-                    <h4>Realizamos la instalación de empotrados, haciendo las regatas para colocar tus tubos y el cableado además de el sobre poner donde instalamos tus canaletas con los cables. </h4>
+                    <h5>Instalación y cableado eléctrico</h5>
+                    <h1>+5</h1>
+                    <p>instalaciones totales</p>
                     <WhatsappButton></WhatsappButton>
 
                 </div>
                 <div className="service">
-                    <h2>Instalación en casas residenciales</h2>
-                    <h4>Realizamos la instalación de todo el cableado eléctrico de tu hogar, además de los tomas interruptores y luces.</h4>
+                    <h5>Instalación en casas residenciales</h5>
+                    <h1>+2</h1>
+                    <p>instalaciones a casas residenciales</p>
                     <WhatsappButton></WhatsappButton>
 
                 </div>

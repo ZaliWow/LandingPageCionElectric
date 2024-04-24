@@ -12,7 +12,7 @@ export function WhatsappButton(params) {
     window.open(url, '_blank');
   };
   return (
-    <Button onClick={handleSendMessage} variant='dark' sx={{ backgroundColor: 'yellow', color: 'black', borderRadius: '10px', padding: '10px', ":hover": { color: 'white', border: '1px solid yellow' } }}>Cotizar</Button>
+    <Button onClick={handleSendMessage} variant='dark' sx={{ marginTop:'20px',backgroundColor: 'red', color: 'white', borderRadius: '10px', padding: '10px', ":hover": { color: 'white', border: '1px solid white' } }}>Cotizar</Button>
 
   )
 }
