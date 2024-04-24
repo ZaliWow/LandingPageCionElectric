@@ -58,6 +58,7 @@ export function Services({ }) {
                     <WhatsappButton></WhatsappButton>
 
                 </div>
+                <img src="public/images/fondopage.gif" alt="" />
             </div>
         </div>
 </div>
