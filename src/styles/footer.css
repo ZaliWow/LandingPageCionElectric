@@ -10,7 +10,7 @@
 }
 .social-media-dev{
     display: flex;
-
+    background-color: black;
     width: 100%;
 justify-content: end;
 }
